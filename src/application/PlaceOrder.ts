@@ -1,9 +1,9 @@
-import CouponRepository from "./CouponRepository";
-import ItemRepository from "./ItemRepository";
-import Order from "./Order";
-import OrderRepository from "./OrderRepository";
+import Order from "../domain/entity/Order";
 import PlaceOrderInput from "./PlaceOrderInput";
 import PlaceOrderOutput from "./PlaceOrderOutput";
+import CouponRepository from "../domain/repository/CouponRepository";
+import OrderRepository from "../domain/repository/OrderRepository";
+import ItemRepository from "../domain/repository/ItemRepository";
 
 export default class PlaceOrder {
     constructor (readonly itemRepository: ItemRepository, readonly orderRepository: OrderRepository, readonly couponRepository: CouponRepository) {
