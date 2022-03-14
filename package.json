@@ -1,14 +1,18 @@
 {
-  "name": "ecommerce",
+  "name": "cccat5_1",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "license": "MIT",
   "scripts": {
-    "test": "tsc && jest ./dist" 
+    "test": "tsc && jest ./dist"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.4.0",
     "jest": "^27.5.1",
+    "pg-promise": "^10.11.1",
     "typescript": "^4.5.5"
   }
 }
