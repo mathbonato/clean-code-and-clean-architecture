@@ -2,13 +2,17 @@ import Order from "../../../domain/entity/Order";
 import OrderRepository from "../../../domain/repository/OrderRepository";
 
 export default class OrderRepositoryMemory implements OrderRepository {
-    orders: Order[];
+	orders: Order[];
 
-    constructor () {
-        this.orders = [];
-    }
+	constructor () {
+		this.orders = [];
+	}
 
-    save(order: Order): void {
-        this.orders.push(order);
-    }
+	async save(order: Order): Promise<void> {
+		this.orders.push(order);
+	}
+
+	async count(): Promise<number> {
+		return this.orders.length;
+	}
 }
