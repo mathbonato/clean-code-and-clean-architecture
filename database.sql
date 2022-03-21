@@ -26,15 +26,14 @@ insert into ccca.coupon (code, percentage, expire_date) values ('VALE20', 20, '2
 insert into ccca.coupon (code, percentage, expire_date) values ('VALE20_EXPIRED', 20, '2020-10-10T10:00:00');
 
 create table ccca.order (
-	id_order serial,
+	id_order serial primary key,
 	coupon text,
 	code text,
 	cpf text,
 	issue_date timestamp,
 	freight numeric,
 	sequence integer,
-	total numeric,
-	primary key (id)
+	total numeric
 );
 
 create table ccca.order_item (
